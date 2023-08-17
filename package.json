@@ -1,0 +1,29 @@
+{
+  "name": "neogeo-compoze",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*.js"
+  },
+  "scripts": {
+    "build": "node bin/build.js",
+    "dev": "nodemon --watch src -e js --exec npm run lint",
+    "lint": "eslint src bin",
+    "serve": "nodemon --watch src -e js src/index.js",
+    "start": "node src/index.js"
+  },
+  "author": "David Vandensteen <dvandensteen@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.28.0",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "yaml": "^2.3.1"
+  }
+}
